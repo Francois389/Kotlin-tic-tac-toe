@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fsp.kotlintictactoe.GameController">
+   <children>
+      <GridPane fx:id="grille" alignment="CENTER" gridLinesVisible="true" layoutX="61.0" layoutY="106.0" prefHeight="203.0" prefWidth="239.0" style="-fx-border-color: black;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btn00" layoutX="90.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn10" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn21" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn11" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn01" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn20" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn22" layoutX="169.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn12" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn02" layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="79.0" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Text layoutX="22.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic Tac Toe">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text fx:id="info" layoutX="404.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="106.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ListView fx:id="listeBoutonsVoyageTemporel" layoutX="357.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
