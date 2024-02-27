@@ -6,6 +6,7 @@ class TicTacToe {
     private var joueurs: Array<Joueur> = arrayOf( Joueur("X"),  Joueur("O"))
     private var nbTour: Int = 0
     private var gagnant: Joueur? = null
+    private var dernierCoup: Pair<Int, Int>? = null
 
     fun placerPion(x: Int, y: Int) {
         if (plateau[x][y] == " " && gagnant == null) {
@@ -22,7 +23,7 @@ class TicTacToe {
         return plateau
     }
 
-    fun estGagnant(): Boolean {
+    private fun estGagnant(): Boolean {
         return (estGagnantLigne() || estGagnantColonne() || estGagnantDiagonale())
     }
 
@@ -55,5 +56,27 @@ class TicTacToe {
 
     fun getJoueurCourant() : Joueur {
         return joueurs[nbTour % 2];
+    }
+
+    fun clone(): TicTacToe {
+        val clone = TicTacToe()
+        var nouveauPlateau = Array(3) { Array(3) { " " } }
+        for (i in 0..2) {
+            for (j in 0..2) {
+                nouveauPlateau[i][j] = plateau[i][j]
+            }
+        }
+        clone.plateau = nouveauPlateau
+        clone.nbTour = nbTour
+        clone.gagnant = gagnant
+        return clone
+    }
+
+    fun getDernierCoup(): Pair<Int, Int>? {
+        return dernierCoup
+    }
+
+    fun estNul(): Boolean {
+        return nbTour == 9
     }
 }
